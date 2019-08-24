@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio of Surjith S M — Freelance Web Designer</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+            color: #142442;
+            overflow-x: hidden;
+        }
+
+        body.night {
+            background-color: #181e29;
+            color: #FFF;
+        }
+
+        ::selection {
+            background: #fff9bb;
+            /* WebKit/Blink Browsers */
+            color: #142442;
+        }
+
+        ::-moz-selection {
+            background: #fff9bb;
+            /* Gecko Browsers */
+            color: #142442;
+        }
+
+
+        .night ::selection {
+            background: #fff;
+            /* WebKit/Blink Browsers */
+            color: #000000;
+        }
+
+        .night ::-moz-selection {
+            background: #fff;
+            /* Gecko Browsers */
+            color: #000000;
+        }
+
+        h1 {
+
+            font-size: 50px;
+            letter-spacing: -2px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            cursor: default;
+        }
+
+        .m-0 {
+            margin: 0 !important;
+        }
+
+        /* .name-wrap {
+            border: 2px solid #75798c;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        } */
+
+
+        [contenteditable="true"].single-line br {
+            display: none;
+        }
+
+        [contenteditable="true"].single-line * {
+            display: inline;
+            white-space: nowrap;
+        }
+
+        h1 .single-line {
+            cursor: initial;
+            outline: none;
+            position: relative;
+            transition: all 0.3s ease;
+            outline: 2px dashed #d1d4e4;
+            padding: 5px 10px;
+            border-radius: 10px;
+            /*border-radius: 1em 0 1em 0;*/
+            /*background-image: linear-gradient(-100deg, rgb(255, 249, 187)), rgba(250,247,133,0.7) 95%, rgba(250,247,133,0.1));*/
+            /* background: rgb(255, 249, 187);*/
+        }
+
+        /* .night h1 span {
+        border-bottom: 2px solid #ffbc00;
+    }
+*/
+
+        .spacer {
+            height: 30px;
+        }
+
+        .highlight {
+            background: rgb(255, 249, 187);
+            transition: all 0.3s ease;
+        }
+
+        .night .highlight {
+            background: rgb(55, 79, 105);
+            transition: all 0.3s ease;
+        }
+
+        .mark {
+            background: rgb(255, 249, 187);
+            color: #142442;
+        }
+
+        .night .mark {
+            background: rgb(55, 79, 105);
+            color: #ffffff;
+        }
+
+        /*    h1 span:before {
+        content: "";
+        position: absolute;
+            left: -10px;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+            background-color: #fff9bb;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 90px;
+    z-index: -1;
+    }*/
+
+        a {
+            color: #00ceff;
+            text-decoration: none;
+            border-bottom: 1px solid #00ceff;
+            position: relative;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            background-color: #00ceff;
+            color: #FFF;
+        }
+
+        @media (min-width:768px) {
+
+            a:hover:before,
+            a:focus:before,
+            a:active:before {
+                border: 5px solid #00ceff;
+                content: "";
+                position: absolute;
+                left: -5px;
+                right: -5px;
+                top: -5px;
+                bottom: -5px;
+            }
+        }
+
+        h2 {
+            font-size: 40px;
+            letter-spacing: -2px;
+            margin: 0;
+            text-align: center;
+            cursor: default;
+        }
+
+        .lead {
+            font-family: sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 10px 0 0;
+            text-align: center;
+            color: #c8d4e2;
+            cursor: default;
+        }
+
+        .night .lead {
+            color: #515f6f;
+        }
+
+        .scroll_text {
+            font-family: sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #c8d4e2;
+        }
+
+        .night .scroll_text {
+            color: #515f6f;
+        }
+
+        p {
+            font-family: Cambria, Georgia, serif;
+            font-size: 26px;
+            line-height: 1.5;
+            color: #7c8ea2;
+        }
+
+        .home,
+        .about,
+        .works,
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .home h1 {
+            position: relative;
+        }
+
+        /* .home .arrow {
+            position: absolute;
+            top: -90px;
+            left: 50%;
+            transform: translateX(-85px);
+            max-height: 80px;
+        }
+
+        .home .alt-text {
+            font-family: cursive, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            position: absolute;
+            top: -130px;
+            left: 50%;
+            transform: translateX(-190px);
+            color: red;
+            letter-spacing: initial;
+        } */
+
+        .input_visitor {
+            font-size: 50px;
+            letter-spacing: -2px;
+            font-weight: bold;
+            color: #142442;
+            width: auto;
+        }
+
+        .highlight:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            right: 0;
+            top: -23px;
+            transform: translateX(-50%);
+            background: url('images/particle_animation.png') 0 0 no-repeat;
+            background-size: 2900%;
+            height: 100px;
+            width: 100px;
+            animation: heart-burst steps(28) .8s 1 both;
+        }
+
+        @keyframes heart-burst {
+            0% {
+                background-position: left;
+            }
+
+            100% {
+                background-position: right;
+            }
+        }
+
+        .work_list {
+            margin: 0;
+            padding: 0;
+        }
+
+        .work_list li {
+            counter-increment: step-counter;
+            padding: 30px 0;
+            font-size: 30px;
+            font-weight: bold;
+            position: relative;
+            list-style: none;
+        }
+
+        .work_list li a {
+            display: inline;
+        }
+
+        .work_list li:before {
+            content: counter(step-counter);
+            position: absolute;
+            font-size: 80px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #edf4fd;
+            font-weight: bold;
+            padding: 3px 8px;
+            z-index: -1;
+        }
+
+        .night .work_list li:before {
+            color: #2f3b4a;
+        }
+
+        .work_list li:first-child:before,
+        ol li:nth-child(5):before {
+            left: 40%;
+        }
+
+        .work_list li:nth-child(3):before {
+            left: 60%;
+        }
+
+        .work_list li img {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 10;
+        }
+
+        .work_list li a:hover img {
+            display: block;
+        }
+
+        /*Scroll Cue*/
+
+        .scroll_me {
+            margin: 20px auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+
+        .scroll_me .dot {
+            /* width: 5px;
+            height: 5px;
+            background-color: #c8d4e2; */
+            display: block;
+            margin: 5px;
+            border-radius: 50%;
+        }
+
+        .scroll_me .dot {
+            position: relative;
+            background: #c8d4e2;
+        }
+
+        .scroll_me .dot:after {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(68, 213, 92, 0);
+            border-top-color: #c8d4e2;
+            border-width: 5px;
+            margin-left: -5px;
+        }
+
+        .scroll_me .dot:first-child {
+            animation-name: bulletanim;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .scroll_me .dot:nth-child(2) {
+            animation-name: bulletanim;
+            animation-duration: 1s;
+            animation-delay: 0.1s;
+            animation-iteration-count: infinite;
+            margin: 15px;
+        }
+
+        .scroll_me .dot:last-child {
+            animation-name: bulletanim;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-iteration-count: infinite;
+            margin: 25px;
+        }
+
+        @keyframes bulletanim {
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .my-photo {
+            margin: 20px;
+            border-radius: 5px;
+            border: 5px solid #FFF;
+            box-shadow: 0px 7px 15px 0px #e8eaef;
+            transition: all 300ms ease-in-out;
+        }
+
+        .my-photo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 7px 15px 0px #cfd3dc;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 1%;
+            padding: 40px;
+
+        }
+
+
+        .col-1 {
+            max-width: calc(100% / 12);
+        }
+
+        .col-2 {
+            max-width: calc(100% / 12 * 2);
+        }
+
+        .col-3 {
+            max-width: calc(100% / 12 * 3);
+        }
+
+        .col-4 {
+            max-width: calc(100% / 12 * 4);
+        }
+
+        .col-5 {
+            max-width: calc(100% / 12 * 5);
+        }
+
+        .col-6 {
+            max-width: calc(100% / 2);
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                overflow: auto;
+            }
+
+            .column {
+                min-width: 100%;
+                width: 100%;
+                margin: 10px 0;
+                padding: 0;
+            }
+
+            .my-photo {
+                margin: 30px 0 0;
+                border: 0;
+                box-shadow: none;
+            }
+
+            .my-photo:hover {
+                transform: translateY(0);
+                box-shadow: none;
+            }
+
+        }
+
+        @media only screen and (min-width: 992px) {
+            .container {
+                width: 90%;
+                max-width: 1400px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .work_list li {
+                font-size: 24px;
+                line-height: 1.5;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll_me">
+        <small class="scroll_text">SCROLL</small>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div id="home" class="home">
+        <h1>Hello
+            <!-- <img src="images/arrow.svg" alt="arrow" class="arrow">
+            <span class="alt-text">What's your name? Enter here..</span> -->
+            <span contenteditable="true" class="single-line" autofocus id="editable" title="Enter your Name">
+                friend</span>, I'm Surjith.
+        </h1>
+        <p class="lead"> A Freelance Web Designer from India </p>
+    </div>
+    <div id="about" class="about">
+        <h2><span class="visitor_name" data-comma="after"></span>Let's get acquainted</h2>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="column col-3">
+                    <picture>
+                        <source srcset="images/surjith-ctly.webp" type="image/webp">
+                        <source srcset="images/surjith-ctly.jpg" type="image/jpeg">
+                        <img src="images/surjith-ctly.jpg" alt="Surjith Photo" class="img-fluid my-photo">
+                    </picture>
+                </div>
+
+                <div class="column text-left">
+
+                    <p>I help agencies, startups &amp; businesses bring their products to life through effective design
+                        &amp;
+                        performant code.
+                        <br> I design and build websites and products with a focus on simplicity, performance and a
+                        borderline
+                        obsessive attention to detail.</p>
+                    <p>Previously, I worked at companies like <a href="http://www.sodtechnologies.com/" target="_blank">SodTech</a>
+                        &amp; <a href="http://travelcentrictechnology.com/" target="_blank">Techcil</a> where I helped
+                        several
+                        clients to succeed online.
+                        <br> I have completed my post graduation from the Sikkim Manipal University. I live in a
+                        beauitiful
+                        village
+                        of Kerala, India. </p>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- // end #about.about -->
+    <div id="works" class="works">
+        <h2>Check out my Works<span class="visitor_name" data-comma="before"></span></h2>
+        <div class="spacer"></div>
+        <div id="displayArea"></div>
+        <!-- // end #displayArea -->
+        <ol class="work_list">
+            <li><a href="http://demo.web3canvas.com/themeforest/fincorp/index-one.html" target="_blank" class="work_single">Fincorp
+                    —
+                    Finance & Marketing Website <img src="images/fincorp.jpg" alt="fincorp" /> </a> </li>
+
+            <li><a href="https://startly.web3templates.com/demo/software/index.html" target="_blank" class="work_single">Starly
+                    —
+                    Software & SaaS Startup
+                    <img src="images/startly.jpg" alt="Starly" /> </a></li>
+
+            <li><a href="http://demo.web3canvas.com/themeforest/duotone" target="_blank" class="work_single">Duotone —
+                    Music &amp; Band One Page Website
+                    <img src="images/duotone.jpg" alt="proland" /> </a> </li>
+            <li><a href="http://demo.web3canvas.com/themeforest/unisco" target="_blank" class="work_single">Unsico —
+                    Website for Education Institution
+                    <img src="images/unisco.jpg" alt="unisco" /> </a></li>
+            <li><a href="http://demo.web3canvas.com/themeforest/offshore" target="_blank" class="work_single">Offshore
+                    — Industrial Website
+                    <img src="images/offshore.jpg" alt="offshore" /> </a></li>
+            <li><a href="http://demo.web3canvas.com/themeforest/coindash/landing" target="_blank" class="work_single">CoinDash
+                    —
+                    Cryptocurrency Landing Page
+                    <img src="images/crypto.jpg" alt="CoinDash" /> </a></li>
+        </ol>
+        <p><i>See more works on <a href="https://dribbble.com/surjithctly" target="_blank">Dribbble</a> </i></p>
+    </div>
+    <div id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Have a project for me <span class="visitor_name" data-comma="none"></span>? or just wanted to say Hi? Just
+            send me an email 😊
+            <br> There's no form to fill up, so you can use your favourite mail app.</p>
+        <p><i class="mark"><span class="visitor_name" data-comma="after"></span>I'm available for new projects</i></p>
+        <p>Email: <a href='mailto&#58;m&#97;i&#108;&#64;su&#114;&#106;&#105;&#116;&#37;68%63tly&#46;i%6E' target="_blank">&#109;a&#105;l&#64;surjithc&#116;ly&#46;&#105;n</a></p>
+        <p class="m-0"><small> <a href="https://twitter.com/surjithctly" target="_blank">Twitter</a> &nbsp;&nbsp;
+                &middot; &nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/surjithctly" target="_blank">Linkedin</a> </small></p>
+    </div>
+    <script type="text/javascript">
+        var homediv = document.getElementById("home");
+        var eSpan = document.getElementById("editable");
+        var visitor_name = document.getElementsByClassName("visitor_name");
+
+
+        var workdiv = document.getElementsByClassName("work_single")
+        //var hoverImg = document.getElementById('x');
+
+        for (var i = 0; i < workdiv.length; i++) {
+            workdiv[i].addEventListener('mousemove', getPos);
+
+        }
+
+
+        function getPos(e) {
+            var hoverImg = e.target.firstElementChild;
+            var rect = this.getBoundingClientRect();
+            x = e.clientX - rect.left;
+            y = e.clientY - rect.top;
+            hoverImg.style.left = (x + 20) + 'px';
+            hoverImg.style.top = (y + 40) + 'px';
+
+        }
+
+
+        function nightMode() {
+            var d = new Date();
+            var n = d.getHours();
+            if (n >= 19 || n <= 6) {
+                document.body.className = "night";
+            }
+        }
+
+        nightMode();
+
+        function selectElementContents(el) {
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+
+
+        eSpan.addEventListener("click", function (event) {
+            //selectElementContents(this);
+            if (this.innerText === 'there') {
+                this.innerText = '';
+            }
+        });
+
+        eSpan.addEventListener("blur", function (event) {
+            //selectElementContents(this);
+            var contentStored = localStorage.getItem('visitor');
+            if (contentStored) {
+                this.innerText = contentStored;
+            } else {
+                this.innerText = 'there';
+            }
+        });
+
+        window.onload = function () {
+
+            localStore.loadLocalStorage();
+            localStore.updateVistorName();
+
+            eSpan.focus();
+            // var temp_value = eSpan.innerHTML; 
+            // eSpan.innerHTML = ''; 
+            // eSpan.innerHTML = temp_value;
+
+            var arr = new Array()
+            var start = 0;
+            var end = start + 1;
+            arr[0] = eSpan.innerText;
+            eSpan.innerText = '';
+
+            function write() {
+                setTimeout(function () {
+                    eSpan.innerText = eSpan.innerText + arr[0].slice(start, end);
+                    start++;
+                    end = start + 1;
+                    if (arr[0].slice(start, end) !== '') {
+                        write();
+                        setEndOfContenteditable(eSpan);
+                    }
+                    setEndOfContenteditable(eSpan);
+                }, 200);
+            }
+            write();
+            setEndOfContenteditable(eSpan);
+
+
+        };
+        // end on load
+
+
+        eSpan.addEventListener("keyup", function (event) {
+            localStore.saveLocalStorage();
+            if (event.which == 13 || event.keyCode == 13) {
+                eSpan.classList.add("highlight");
+                document.activeElement.blur();
+                setTimeout(function () {
+                    eSpan.classList.remove("highlight");
+                }, 500);
+            }
+            localStore.updateVistorName();
+        });
+
+
+        var localStore = {
+            saveLocalStorage: function () {
+                localStorage.setItem('visitor', eSpan.innerText);
+            },
+            loadLocalStorage: function () {
+                var contentStored = localStorage.getItem('visitor');
+                if (contentStored) {
+                    eSpan.innerText = contentStored;
+                }
+            },
+            updateVistorName: function () {
+                var contentStored = localStorage.getItem('visitor');
+                Array.prototype.forEach.call(visitor_name, function (element, index, array) {
+                    var commapos = element.getAttribute("data-comma");
+                    if (contentStored) {
+                        if (commapos === 'after') {
+                            element.innerText = contentStored + ', ';
+                        }
+
+                        if (commapos === 'before') {
+                            element.innerText = ', ' + contentStored;
+                        }
+
+                        if (commapos === 'none') {
+                            element.innerText = contentStored;
+                        }
+                    }
+                });
+
+            }
+        }
+
+        function setEndOfContenteditable(contentEditableElement) {
+            var range, selection;
+            if (document.createRange) //Firefox, Chrome, Opera, Safari, IE 9+
+            {
+                range = document.createRange(); //Create a range (a range is a like the selection but invisible)
+                range.selectNodeContents(contentEditableElement); //Select the entire contents of the element with the range
+                range.collapse(false); //collapse the range to the end point. false means collapse to end rather than the start
+                selection = window.getSelection(); //get the selection object (allows you to change selection)
+                selection.removeAllRanges(); //remove any selections already made
+                selection.addRange(range); //make the range you have just created the visible selection
+            } else if (document.selection) //IE 8 and lower
+            {
+                range = document.body.createTextRange(); //Create a range (a range is a like the selection but invisible)
+                range.moveToElementText(contentEditableElement); //Select the entire contents of the element with the range
+                range.collapse(false); //collapse the range to the end point. false means collapse to end rather than the start
+                range.select(); //Select the range (make it the visible selection
+            }
+        }
+    </script>
+</body>
+
+</html>
